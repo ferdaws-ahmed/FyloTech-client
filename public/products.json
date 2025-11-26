@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "AeroX Falcon Drone",
+    "subtitle": "4K Ultra HD Camera with GPS",
+    "category": "drone",
+    "image": "/product-images/aerox-drone.jpeg",
+    "short-description": "High-performance drone for aerial photography.",
+    "full-description": "AeroX Falcon Drone offers 4K Ultra HD recording with advanced stabilization for crisp and smooth footage. Its GPS-assisted flight ensures precise positioning and safe return home. The foldable design makes it portable and easy to carry. Multiple intelligent flight modes including follow-me, waypoint, and orbit enhance creative shooting. Long battery life provides extended flight sessions. Ideal for both beginners and professional photographers. Built with durable materials to withstand outdoor conditions.",
+    "price": 299.99,
+    "ratings": 4.7
+  },
+  {
+    "id": 2,
+    "title": "NovaBook Ultra 15",
+    "subtitle": "Powerful Laptop for Creators",
+    "category": "laptop",
+    "image": "/product-images/novabook.jpeg",
+    "short-description": "Ultra-slim laptop with high-end performance.",
+    "full-description": "NovaBook Ultra 15 features a vibrant Full HD display and fast SSD storage for seamless multitasking. Its powerful processor handles demanding software effortlessly. Lightweight and slim, it is perfect for portability and on-the-go work. Long-lasting battery supports hours of productivity. Comes with multiple ports and connectivity options. An ergonomic keyboard ensures comfortable typing during long work sessions. Ideal for designers, developers, and students looking for a reliable laptop.",
+    "price": 899.99,
+    "ratings": 4.6
+  },
+  {
+    "id": 3,
+    "title": "ShadowStrike Mechanical Keyboard",
+    "subtitle": "RGB Backlit Gaming Keyboard",
+    "category": "gaming accessories",
+    "image": "/product-images/mechanical-keyboard.jpeg",
+    "short-description": "Tactile keyboard designed for gamers.",
+    "full-description": "ShadowStrike Mechanical Keyboard delivers tactile feedback and fast response for competitive gaming. Customizable RGB lighting allows players to create personalized setups. Programmable keys enable complex macros. Ergonomic design ensures comfort during extended gaming sessions. Durable switches guarantee long-lasting performance. Compatible with multiple operating systems. Perfect for professional gamers and gaming enthusiasts who demand precision and style.",
+    "price": 129.99,
+    "ratings": 4.5
+  },
+  {
+    "id": 4,
+    "title": "CyberVision Smart CCTV",
+    "subtitle": "AI-Powered Security Camera",
+    "category": "smart home devices",
+    "image": "/product-images/cyber-cctv.jpeg",
+    "short-description": "Smart home camera with AI detection.",
+    "full-description": "CyberVision Smart CCTV features AI motion detection for accurate monitoring. Captures HD video with night vision capabilities. Two-way audio allows seamless communication. Mobile alerts keep you updated on unusual activity. Supports cloud and local storage. Integrates with smart home assistants for voice control. Sleek design complements any home interior. Reliable solution for home security and peace of mind.",
+    "price": 99.99,
+    "ratings": 4.4
+  },
+  {
+    "id": 5,
+    "title": "StealthLock USB Security",
+    "subtitle": "Portable Data Protection Device",
+    "category": "hacking",
+    "image": "/product-images/steasth-lock-usb.jpeg",
+    "short-description": "Secure USB tool for data protection and audits.",
+    "full-description": "StealthLock USB Security is a compact device designed to protect sensitive data and audit systems. It scans for vulnerabilities and prevents unauthorized access. Plug-and-play functionality makes it easy to use. Supports encryption of files for added security. Portable and lightweight for professionals on the move. Ideal for ethical hackers and cybersecurity enthusiasts. Provides an essential toolkit for learning and practicing safe computing.",
+    "price": 59.99,
+    "ratings": 4.3
+  },
+  {
+    "id": 6,
+    "title": "QuantumSphere VR",
+    "subtitle": "Next-Gen Immersive Headset",
+    "category": "futuristic gadget",
+    "image": "/product-images/quantam-vr.jpeg",
+    "short-description": "Futuristic VR headset with high resolution.",
+    "full-description": "QuantumSphere VR provides immersive virtual reality experiences with ultra-fast sensors and high-resolution displays. Supports multiple platforms including PC and console. Comfortable design for long gaming or educational sessions. Realistic visuals reduce motion sickness and enhance interactivity. Adjustable straps and ergonomic fit ensure stability. Perfect for gaming, learning, and virtual exploration. Built with cutting-edge technology for next-generation users.",
+    "price": 399.99,
+    "ratings": 4.8
+  },
+  {
+    "id": 7,
+    "title": "PixelOne Max",
+    "subtitle": "High-End Android Smartphone",
+    "category": "smartphone",
+    "image": "/product-images/pixel-one.jpeg",
+    "short-description": "Stylish smartphone with powerful camera and battery.",
+    "full-description": "PixelOne Max offers a 64MP AI camera for professional-grade photos and videos. Features a 120Hz AMOLED display for smooth visuals. Powered by a fast processor for multitasking and gaming. Long-lasting battery with fast charging. Advanced security features like fingerprint and face recognition. Supports 5G connectivity and high-speed internet. Perfect for users who want performance, style, and durability in one device.",
+    "price": 399.99,
+    "ratings": 4.6
+  },
+  {
+    "id": 8,
+    "title": "ThunderStrike Gaming Mouse",
+    "subtitle": "RGB High-Precision Mouse",
+    "category": "gaming accessories",
+    "image": "/product-images/gaming-mouse.jpeg",
+    "short-description": "Ergonomic gaming mouse with customizable RGB.",
+    "full-description": "ThunderStrike Gaming Mouse offers adjustable DPI settings for precise control. Ergonomic design ensures comfort during extended sessions. RGB lighting customizable with multiple effects. Programmable buttons support complex gaming macros. Durable construction for long-term use. Smooth sensor tracking for accurate gameplay. Ideal for gamers seeking performance and aesthetics in one device.",
+    "price": 49.99,
+    "ratings": 4.5
+  },
+  {
+    "id": 9,
+    "title": "AirSense LED Motion Light",
+    "subtitle": "Smart Home Motion Sensor Light",
+    "category": "smart home devices",
+    "image": "/product-images/motion-light.jpeg",
+    "short-description": "Motion-activated LED for convenience and safety.",
+    "full-description": "AirSense LED Motion Light automatically illuminates spaces when motion is detected. Energy-efficient LED reduces electricity consumption. Easy installation in hallways, closets, or stairs. Adjustable sensitivity for different distances. Compact and modern design fits any home décor. Ideal for families and seniors. Enhances safety and convenience with smart automation features.",
+    "price": 29.99,
+    "ratings": 4.2
+  },
+  {
+    "id": 10,
+    "title": "SkyRider Mini Drone",
+    "subtitle": "Compact Beginner-Friendly Drone",
+    "category": "drone",
+    "image": "/product-images/skyride-drone.jpeg",
+    "short-description": "Beginner drone with stable flight and protection.",
+    "full-description": "SkyRider Mini Drone is designed for beginners with altitude hold and one-click takeoff/landing. Equipped with propeller guards for safe flights. Lightweight and portable for travel. Multiple flight modes help learners master flying skills. Durable construction withstands minor crashes. Long battery life for extended practice. Ideal for kids, hobbyists, and those learning drone photography.",
+    "price": 69.99,
+    "ratings": 4.1
+  },
+  {
+    "id": 11,
+    "title": "EchoPad Creator Laptop",
+    "subtitle": "Portable Laptop for Creators",
+    "category": "laptop",
+    "image": "/product-images/eco-pad.jpeg",
+    "short-description": "High-speed laptop for productivity and creativity.",
+    "full-description": "EchoPad Creator Laptop delivers fast processing for multitasking and creative workflows. Vibrant display ensures accurate colors for design and video editing. Silent cooling technology enhances performance. Lightweight design makes it ideal for on-the-go use. Long battery life supports extended working sessions. Multiple ports and connectivity options for external devices. Perfect for students, creators, and professionals who need speed and reliability.",
+    "price": 999.99,
+    "ratings": 4.7
+  },
+  {
+    "id": 12,
+    "title": "Phantom Pen Tester Kit",
+    "subtitle": "Ethical Hacking Toolkit",
+    "category": "hacking",
+    "image": "/product-images/pen-tester-kit.jpeg",
+    "short-description": "Portable toolkit for cybersecurity enthusiasts.",
+    "full-description": "Phantom Pen Tester Kit provides a complete suite of tools for ethical hacking and security testing. Wireless, network, and system tools included. Compact design makes it portable and convenient. Ideal for learning penetration testing and vulnerability assessment. Plug-and-play functionality with minimal setup. Helps professionals and students explore cybersecurity safely. A practical kit for both learning and real-world security auditing.",
+    "price": 139.99,
+    "ratings": 4.5
+  },
+  {
+    "id": 13,
+    "title": "Nebula Smart Speaker",
+    "subtitle": "Voice-Controlled Smart Assistant",
+    "category": "smart home devices",
+    "image": "/product-images/nevula-spiker.jpeg",
+    "short-description": "Premium smart speaker with excellent sound quality.",
+    "full-description": "Nebula Smart Speaker delivers crystal-clear audio and rich bass. Integrates seamlessly with smart home ecosystems for voice control. Supports music streaming, reminders, and smart device management. Compact design fits any room. Multi-directional sound enhances listening experience. Compatible with popular voice assistants. Perfect for music lovers and smart home enthusiasts looking for convenience and quality.",
+    "price": 79.99,
+    "ratings": 4.4
+  },
+  {
+    "id": 14,
+    "title": "HyperVision AR Glasses",
+    "subtitle": "Next-Gen Augmented Reality Eyewear",
+    "category": "futuristic gadget",
+    "image": "/product-images/hyper-vission-glass.jpeg",
+    "short-description": "Lightweight AR glasses with interactive overlays.",
+    "full-description": "HyperVision AR Glasses offer real-time holographic projections with touch-free controls. Lightweight and ergonomic for long-term use. Ideal for navigation, education, gaming, and mixed reality experiences. Connects seamlessly with multiple devices. Provides interactive and immersive AR experiences. Enhances productivity and creativity with augmented information layers. Perfect for tech enthusiasts and early adopters.",
+    "price": 499.99,
+    "ratings": 4.6
+  },
+  {
+    "id": 15,
+    "title": "WavePods Lite",
+    "subtitle": "Comfort-Fit Wireless Earbuds",
+    "category": "smartphone",
+    "image": "/product-images/wave-pots.jpeg",
+    "short-description": "Wireless earbuds with clear audio and long battery life.",
+    "full-description": "WavePods Lite ensures crystal-clear audio and passive noise isolation. Secure fit suitable for workouts and daily use. Supports fast pairing and touch controls. Long battery life with quick recharge. Lightweight and compact for portability. Compatible with multiple devices. Perfect for music, calls, and immersive sound experiences on the go.",
+    "price": 39.99,
+    "ratings": 4.2
+  },
+  {
+    "id": 16,
+    "title": "GalaxyStream 8K Monitor",
+    "subtitle": "Ultra High Definition Futuristic Display",
+    "category": "futuristic gadget",
+    "image": "/product-images/monitor-8k.jpeg",
+    "short-description": "Stunning 8K monitor with eye-care technology.",
+    "full-description": "GalaxyStream 8K Monitor offers unparalleled clarity and color accuracy. High refresh rate ensures smooth visuals for gaming and content creation. Eye-care technology reduces strain during long sessions. Ultra-thin bezels provide immersive viewing. Multiple ports for connectivity with external devices. Perfect for designers, gamers, and video editors. Elevates workspace with cutting-edge display technology and sleek design.",
+    "price": 1299.99,
+    "ratings": 4.9
+  },
+  {
+    "id": 17,
+    "title": "Vortex Gaming Headset",
+    "subtitle": "Surround Sound Audio for Gamers",
+    "category": "gaming accessories",
+    "image": "/product-images/vortex-headset.jpeg",
+    "short-description": "Comfortable headset with immersive sound.",
+    "full-description": "Vortex Gaming Headset provides immersive surround sound with deep bass. Noise-canceling microphone ensures clear communication. Soft ear cushions for extended gaming comfort. Compatible with multiple platforms. Durable design ensures long-lasting use. Adjustable headband fits different head sizes. Perfect for competitive gamers seeking enhanced audio experience.",
+    "price": 79.99,
+    "ratings": 4.5
+  },
+  {
+    "id": 18,
+    "title": "Titan Shield WiFi Blocker",
+    "subtitle": "Portable Network Security Device",
+    "category": "hacking",
+    "image": "/product-images/titan-wifi-blocker.jpeg",
+    "short-description": "Compact device to secure and test wireless networks.",
+    "full-description": "Titan Shield WiFi Blocker allows network security testing and signal protection. Portable and easy to deploy in different environments. Helps identify vulnerabilities and prevent unauthorized access. Compact design ensures convenience. Ideal for cybersecurity professionals and ethical hackers. Provides educational opportunities for learning about wireless security. Supports multiple network protocols and configurations.",
+    "price": 159.99,
+    "ratings": 4.3
+  },
+  {
+    "id": 19,
+    "title": "EcoHeat Smart Thermostat",
+    "subtitle": "Energy-Saving Home Automation",
+    "category": "smart home devices",
+    "image": "/product-images/eco-heat.jpeg",
+    "short-description": "Optimizes room temperature and saves energy.",
+    "full-description": "EcoHeat Smart Thermostat adapts to your schedule and preferences. Reduces energy consumption while maintaining comfort. Easy to control via mobile app or voice assistant. Sleek design complements modern home interiors. Supports smart automation and integration with other devices. Provides usage analytics and tips for energy efficiency. Ideal for homeowners seeking smarter temperature management.",
+    "price": 129.99,
+    "ratings": 4.4
+  },
+  {
+    "id": 20,
+    "title": "ZenMax Ultra",
+    "subtitle": "Flagship Premium Smartphone",
+    "category": "smartphone",
+    "image": "/product-images/zenmax.jpeg",
+    "short-description": "High-performance smartphone with advanced camera.",
+    "full-description": "ZenMax Ultra features a stunning OLED display with vibrant colors and deep blacks. Advanced processor ensures smooth multitasking and gaming. High-end camera system captures professional-quality photos and videos. Long-lasting battery with fast charging capabilities. Supports 5G connectivity and latest wireless standards. Sleek and durable design for premium feel. Ideal for users who want speed, style, and cutting-edge technology in a single device.",
+    "price": 999.99,
+    "ratings": 4.8
+  }
+]

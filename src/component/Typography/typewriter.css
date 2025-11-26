@@ -1,0 +1,31 @@
+/* Blinking cursor */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Gradient for H2 typewriting */
+.gradient-text {
+  background: linear-gradient(90deg, #4f46e5, #3b82f9, #06b6d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph flowing gradient effect */
+.flowing-gradient-text {
+  background: linear-gradient(270deg, #4f46e5, #3b82f6, #06b6d4, #4f46e5);
+  background-size: 600% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 8s linear infinite;
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
