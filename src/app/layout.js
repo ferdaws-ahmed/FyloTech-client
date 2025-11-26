@@ -7,11 +7,19 @@ import { Toaster, toast } from "react-hot-toast";
 export const metadata = {
   title: "FyloTech - Modern Gadget Shop",
   description: "Your hub for the latest tech gear.",
+  icons: {
+    icon: "/fylo-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>FyloTech</title>
+        <link rel="icon" type="image/png" href="/fylo-icon.png" />
+
+      </head>
       <body className="antialiased bg-gray-900 text-gray-100">
         <AuthContextProvider>
           {/* Custom animated Toaster */}
