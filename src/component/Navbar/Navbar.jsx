@@ -74,6 +74,7 @@ const Navbar = () => {
                 className="flex items-center space-x-2 p-1 rounded-full bg-gray-800 hover:bg-gray-700 transition focus:outline-none border border-gray-700 overflow-hidden"
               >
                 <img
+                 referrerPolicy="no-referrer"
                   src={user.photoURL || '/default-avatar.png'}
                   alt="User Avatar"
                   className="w-10 h-10 rounded-full object-cover"

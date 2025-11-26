@@ -5,14 +5,15 @@ import axios from 'axios';
 import { Star } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-
-
+import LoadingSpinner from '../../component/Loading/LoadingSpinner'; 
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true); // ✅
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
-   const router = useRouter();
+  const router = useRouter();
+
   const categories = [
     'all',
     'smartphone',
@@ -26,11 +27,14 @@ const ProductsPage = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setLoading(true); 
       try {
-        const res = await axios.get('/products.json');
+        const res = await axios.get('http://localhost:5000/products');
         setProducts(res.data);
       } catch (err) {
         console.error('Failed to load products', err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -53,6 +57,8 @@ const ProductsPage = () => {
       if (!aMatch && bMatch) return 1;
       return a.title.localeCompare(b.title);
     });
+
+  if (loading) return <LoadingSpinner fullScreen={true} message="Loading products..." />;
 
   return (
     <div className="px-4 md:px-12 lg:px-24 py-12 bg-[#0A0A0A] min-h-screen text-gray-200">
@@ -92,7 +98,7 @@ const ProductsPage = () => {
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {filteredProducts.map(product => (
           <div
-            key={product.id}
+            key={product._id}
             className="bg-gray-900 rounded-xl shadow-md overflow-hidden flex flex-col relative transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-102 hover:shadow-[0_0_25px_rgba(0,150,255,0.5)] hover:ring-1 hover:ring-blue-400"
           >
             <div className="absolute inset-0 pointer-events-none rounded-xl bg-gradient-to-t from-blue-500/10 via-transparent to-transparent opacity-0 hover:opacity-20 transition-opacity duration-500"></div>
@@ -126,8 +132,10 @@ const ProductsPage = () => {
                   </div>
                 </div>
               </div>
-              <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors duration-300"
-               onClick={() => router.push(`/products/${product.id}`)}>
+              <button
+                className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors duration-300"
+                onClick={() => router.push(`/products/${product._id}`)}
+              >
                 Details
               </button>
             </div>

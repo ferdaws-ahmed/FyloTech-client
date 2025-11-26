@@ -8,6 +8,7 @@ import HeroSection from '@/component/HeroSection/HeroSection';
 import Typography from '@/component/Typography/Typography';
 import Reviews from '@/component/Reviews/Reviews';
 import WhyChooseFyloTech from '@/component/WhyChooseFyloTech/WhyChooseFyloTech';
+import PopularProducts from '@/component/PopularProducts/PopularProducts';
 
 export default function Home() {
   
@@ -38,6 +39,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center py-20 min-h-[500px] transition-colors duration-300">
       <HeroSection></HeroSection>
+      <PopularProducts></PopularProducts>
       <Typography></Typography>
       <Reviews></Reviews>
       <WhyChooseFyloTech></WhyChooseFyloTech>
