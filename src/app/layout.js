@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
             toastOptions={{
               duration: 4000,
               style: {
-                background: "#1e293b", // dark blue-gray
-                color: "#f1f5f9", // light text
+                background: "#1e293b", 
+                color: "#f1f5f9", 
                 padding: "12px 20px",
                 borderRadius: "12px",
                 fontWeight: "500",

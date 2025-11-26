@@ -13,7 +13,7 @@ const PopularProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/products');
+        const res = await axios.get('https://fylo-tech-server.vercel.app/products');
         if (res.data && Array.isArray(res.data)) {
           // Filter only products with rating >= 4.5
           const filtered = res.data.filter(p => p.ratings >= 4.5);

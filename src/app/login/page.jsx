@@ -38,7 +38,7 @@ const LoginPage = () => {
 
       const { uid, displayName, email, photoURL } = result.user;
 
-      await fetch("http://localhost:5000/users", {
+      await fetch("https://fylo-tech-server.vercel.app/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ uid, displayName, email, photoURL }),

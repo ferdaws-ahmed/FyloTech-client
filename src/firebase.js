@@ -1,5 +1,4 @@
-// src/firebase.js
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
@@ -18,7 +17,9 @@ let db;
 let googleProvider;
 
 if (typeof window !== "undefined") {
-  app = initializeApp(firebaseConfig);
+  if (!getApps().length) {
+    app = initializeApp(firebaseConfig);
+  }
   auth = getAuth(app);
   db = getFirestore(app);
   googleProvider = new GoogleAuthProvider();

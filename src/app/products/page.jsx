@@ -9,7 +9,7 @@ import LoadingSpinner from '../../component/Loading/LoadingSpinner';
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // ✅
+  const [loading, setLoading] = useState(true); 
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const router = useRouter();
@@ -29,7 +29,7 @@ const ProductsPage = () => {
     const fetchProducts = async () => {
       setLoading(true); 
       try {
-        const res = await axios.get('http://localhost:5000/products');
+        const res = await axios.get('https://fylo-tech-server.vercel.app/products');
         setProducts(res.data);
       } catch (err) {
         console.error('Failed to load products', err);

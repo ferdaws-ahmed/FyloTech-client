@@ -16,7 +16,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const fetchHeroData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/hero");
+        const res = await axios.get("https://fylo-tech-server.vercel.app/hero");
         setSlides(res.data);
       } catch (err) {
         console.error("Failed to fetch hero data:", err);

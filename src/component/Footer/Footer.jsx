@@ -17,13 +17,13 @@ const Footer = () => {
               Your ultimate destination for modern, cutting-edge technology and gadgets.
             </p>
             <div className="flex space-x-4 mt-4">
-              <Link href="#" className="hover:text-blue-400 transition">
+              <Link href="https://www.facebook.com/" className="hover:text-blue-400 transition">
                 <Facebook size={20} />
               </Link>
-              <Link href="#" className="hover:text-blue-400 transition">
+              <Link href="https://www.facebook.com/" className="hover:text-blue-400 transition">
                 <Twitter size={20} />
               </Link>
-              <Link href="#" className="hover:text-blue-400 transition">
+              <Link href="https://www.instagram.com/" className="hover:text-blue-400 transition">
                 <Instagram size={20} />
               </Link>
             </div>

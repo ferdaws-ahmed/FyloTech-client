@@ -8,39 +8,36 @@ import { Star } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export default function Page() {
-  const { id } = useParams(); // URL থেকে ID নেওয়া হচ্ছে
+  const { id } = useParams(); 
   const router = useRouter();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-// src/app/products/[id]/page.jsx
-// ...
-useEffect(() => {
-  // 🛑 যদি ID না থাকে, লোড হতে দিন এবং অপেক্ষা করুন।
-  if (!id) {
-    console.warn("ID is not yet available, waiting...");
-    // Loading false করবেন না, কারণ আমরা এখনও ডেটা ফেচ করিনি।
-    return;
-  }
-  
-  console.log("Fetching with confirmed ID:", id); // নিশ্চিত ID লগ করুন
-
-  const fetchProduct = async () => {
-    setLoading(true); // যখন ID পাব, তখন লোডিং শুরু হবে।
-    try {
-      const res = await axios.get(`http://localhost:5000/products/${id}`);
-      setProduct(res.data);
-    } catch (err) {
-      // ... error handling ...
-      setProduct(null);
-    } finally {
-      setLoading(false); // ডেটা ফেচ শেষ হলে লোডিং শেষ হবে।
+  useEffect(() => {
+    
+    if (!id) {
+      console.warn("ID is not yet available, waiting...");
+      return;
     }
-  };
 
-  fetchProduct();
-}, [id]); // id চেঞ্জ হলে রি-রান হবে
-// ...
+    console.log("Fetching with confirmed ID:", id);
+
+    const fetchProduct = async () => {
+      setLoading(true);
+      try {
+        const res = await axios.get(`https://fylo-tech-server.vercel.app/products/${id}`);
+        setProduct(res.data);
+      } catch (err) {
+        console.error(err);
+        setProduct(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
+
   // --- Buy Now Handler ---
   const handleBuyNow = () => {
     if (product) {
@@ -57,7 +54,6 @@ useEffect(() => {
 
   // --- Loading/Error State Renders ---
   if (loading) return <p className="text-center mt-20 text-gray-400">Loading...</p>;
-  // API কল ব্যর্থ হলে বা product না পেলে
   if (!product) return <p className="text-center mt-20 text-red-500 font-bold text-xl">Product not found! Check your ID and API server.</p>;
 
   // --- Success Render ---
@@ -102,6 +98,12 @@ useEffect(() => {
             <span className="ml-4 px-3 py-1 bg-purple-600 rounded-full text-xs font-medium uppercase text-white">
               Priority: {getPriority(product.ratings)}
             </span>
+          </div>
+
+          {/* Seller Info */}
+          <div className="mt-2 text-gray-400 text-sm">
+            <p>Seller: <span className="font-medium text-gray-200">{product.sellerName}</span></p>
+            <p>Contact: <span className="font-medium text-gray-200">{product.sellerEmail}</span></p>
           </div>
 
           {/* Description and Date */}
