@@ -85,6 +85,7 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="Product subtitle"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
+              required
             />
           </div>
 
@@ -98,6 +99,7 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="Product category"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
+              required
             />
           </div>
 
@@ -113,6 +115,7 @@ export default function AddProduct() {
               placeholder="Brief description of the product"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 resize-none"
               rows={2}
+              required
             />
           </div>
 
@@ -126,6 +129,7 @@ export default function AddProduct() {
               placeholder="Detailed description of the product"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 resize-none"
               rows={4}
+              required
             />
           </div>
 
@@ -139,6 +143,7 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="0.00"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
+              required
             />
           </div>
 
@@ -155,6 +160,7 @@ export default function AddProduct() {
               min="0"
               max="5"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
+              required
             />
           </div>
         </div>
