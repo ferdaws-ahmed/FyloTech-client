@@ -22,46 +22,58 @@ export default function AddProduct() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- const handleAddProduct = async () => {
-  if (!user) return toast.error("You must be logged in");
+  
+  const handleAddProduct = async (e) => {
+    
+    e.preventDefault(); 
+    
+    if (!user) return toast.error("You must be logged in");
 
-  const productData = {
-    ...formData,
-    sellerName: user.displayName || "Anonymous",
-    sellerEmail: user.email,
-    price: parseFloat(formData.price),
-    ratings: parseFloat(formData.ratings),
+    const productData = {
+      ...formData,
+      sellerName: user.displayName || "Anonymous",
+      sellerEmail: user.email,
+      
+      price: formData.price ? parseFloat(formData.price) : 0, 
+      ratings: formData.ratings ? parseFloat(formData.ratings) : 0, 
+    };
+
+    try {
+      setLoading(true);
+      // Only one POST request
+      await axios.post('https://fylo-tech-server.vercel.app/products', productData);
+
+      toast.success("Product added successfully!");
+     
+      setFormData({
+        title: '',
+        subtitle: '',
+        category: '',
+        image: '',
+        "short-description": '',
+        "full-description": '',
+        price: '',
+        ratings: '',
+      });
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to add product");
+    } finally {
+      setLoading(false);
+    }
   };
-
-  try {
-    setLoading(true);
-    // Only one POST request
-    await axios.post('https://fylo-tech-server.vercel.app/products', productData);
-
-    toast.success("Product added successfully!");
-    setFormData({
-      title: '',
-      subtitle: '',
-      category: '',
-      image: '',
-      "short-description": '',
-      "full-description": '',
-      price: '',
-      ratings: '',
-    });
-  } catch (err) {
-    console.error(err);
-    toast.error("Failed to add product");
-  } finally {
-    setLoading(false);
-  }
-};
 
   return (
     <div className="min-h-screen p-8 bg-gray-900 text-gray-100">
       <h2 className="text-3xl font-bold mb-8 text-center text-white">Add New Product</h2>
-      <div className="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg">
+      
+     
+      <form 
+        onSubmit={handleAddProduct} 
+        className="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
           {/* Title */}
           <div className="flex flex-col">
             <label className="mb-1 font-semibold">Title</label>
@@ -72,6 +84,7 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="Product title"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
+              required 
             />
           </div>
 
@@ -102,8 +115,21 @@ export default function AddProduct() {
               required
             />
           </div>
-
           
+          {/* Image URL */}
+           <div className="flex flex-col">
+            <label className="mb-1 font-semibold">Image URL</label>
+            <input
+              type="url" 
+              name="image"
+              value={formData.image}
+              onChange={handleChange}
+              placeholder="Product Image URL"
+              className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
+              required
+            />
+          </div>
+
 
           {/* Short Description */}
           <div className="flex flex-col md:col-span-2">
@@ -165,15 +191,15 @@ export default function AddProduct() {
           </div>
         </div>
 
-        {/* Add Button */}
+        
         <button
-          onClick={handleAddProduct}
+          type="submit" 
           disabled={loading}
           className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md shadow-md transition-transform transform hover:scale-[1.02]"
         >
           {loading ? "Adding Product..." : "Add Product"}
         </button>
-      </div>
+      </form>
     </div>
   );
 }
