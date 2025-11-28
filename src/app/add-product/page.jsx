@@ -27,7 +27,21 @@ export default function AddProduct() {
     
     e.preventDefault(); 
     
-    if (!user) return toast.error("You must be logged in");
+   if (!user) return toast.error("You must be logged in");
+
+  
+    const requiredFields = [
+        'title', 'subtitle', 'category', 'image', 'short-description', 
+        'full-description', 'price', 'ratings'
+    ];
+    
+    for (const field of requiredFields) {
+       
+        if (!formData[field]) { 
+            toast.error(`Please fill in the ${field.replace('-', ' ')} field.`);
+            return; 
+        }
+    }
 
     const productData = {
       ...formData,
