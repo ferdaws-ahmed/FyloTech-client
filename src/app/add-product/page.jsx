@@ -22,43 +22,48 @@ export default function AddProduct() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  
   const handleAddProduct = async (e) => {
-    
-    e.preventDefault(); 
-    
-   if (!user) return toast.error("You must be logged in");
+    e.preventDefault();
 
-  
+    if (!user) return toast.error("You must be logged in");
+
+    // Required fields check
     const requiredFields = [
-        'title', 'subtitle', 'category', 'image', 'short-description', 
-        'full-description', 'price', 'ratings'
+      'title', 'subtitle', 'category', 'image', 'short-description',
+      'full-description', 'price', 'ratings'
     ];
-    
+
     for (const field of requiredFields) {
-       
-        if (!formData[field]) { 
-            toast.error(`Please fill in the ${field.replace('-', ' ')} field.`);
-            return; 
-        }
+      if (!formData[field] || formData[field].toString().trim() === '') {
+        toast.error(`Please fill in the ${field.replace('-', ' ')} field.`);
+        return;
+      }
+    }
+
+    // Price & Ratings numeric validation
+    const priceValue = parseFloat(formData.price);
+    const ratingsValue = parseFloat(formData.ratings);
+
+    if (isNaN(priceValue) || priceValue <= 0) {
+      return toast.error("Price must be a valid number greater than 0");
+    }
+
+    if (isNaN(ratingsValue) || ratingsValue < 0 || ratingsValue > 5) {
+      return toast.error("Ratings must be a number between 0 and 5");
     }
 
     const productData = {
       ...formData,
       sellerName: user.displayName || "Anonymous",
       sellerEmail: user.email,
-      
-      price: formData.price ? parseFloat(formData.price) : 0, 
-      ratings: formData.ratings ? parseFloat(formData.ratings) : 0, 
+      price: priceValue,
+      ratings: ratingsValue,
     };
 
     try {
       setLoading(true);
-      // Only one POST request
       await axios.post('https://fylo-tech-server.vercel.app/products', productData);
-
       toast.success("Product added successfully!");
-     
       setFormData({
         title: '',
         subtitle: '',
@@ -81,7 +86,6 @@ export default function AddProduct() {
     <div className="min-h-screen p-8 bg-gray-900 text-gray-100">
       <h2 className="text-3xl font-bold mb-8 text-center text-white">Add New Product</h2>
       
-     
       <form 
         onSubmit={handleAddProduct} 
         className="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg"
@@ -98,7 +102,6 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="Product title"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
-              required 
             />
           </div>
 
@@ -112,7 +115,6 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="Product subtitle"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
-              required
             />
           </div>
 
@@ -126,24 +128,21 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="Product category"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
-              required
             />
           </div>
           
           {/* Image URL */}
-           <div className="flex flex-col">
+          <div className="flex flex-col">
             <label className="mb-1 font-semibold">Image URL</label>
             <input
-              type="url" 
+              type="url"
               name="image"
               value={formData.image}
               onChange={handleChange}
               placeholder="Product Image URL"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
-              required
             />
           </div>
-
 
           {/* Short Description */}
           <div className="flex flex-col md:col-span-2">
@@ -155,7 +154,6 @@ export default function AddProduct() {
               placeholder="Brief description of the product"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 resize-none"
               rows={2}
-              required
             />
           </div>
 
@@ -169,7 +167,6 @@ export default function AddProduct() {
               placeholder="Detailed description of the product"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 resize-none"
               rows={4}
-              required
             />
           </div>
 
@@ -183,7 +180,6 @@ export default function AddProduct() {
               onChange={handleChange}
               placeholder="0.00"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
-              required
             />
           </div>
 
@@ -200,14 +196,12 @@ export default function AddProduct() {
               min="0"
               max="5"
               className="p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"
-              required
             />
           </div>
         </div>
 
-        
         <button
-          type="submit" 
+          type="submit"
           disabled={loading}
           className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md shadow-md transition-transform transform hover:scale-[1.02]"
         >
